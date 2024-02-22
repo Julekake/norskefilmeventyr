@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+body {
+    background-color: #131316;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.centered {
+    text-align: center;
+}
+
+.button-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.transparent-button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.transparent-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+header, footer {
+    padding: 20px;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
