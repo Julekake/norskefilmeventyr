@@ -1,8 +1,9 @@
 const aboutButton = document.getElementById("about-button");
 const contactButton = document.getElementById("contact-button");
 
-aboutButtonaddEventListener("click", () => {
-    // Show the "Om oss" section and hide the others
+contactButton.addEventListener("click"), () => {
+    
+}    // Show the "Om oss" section and hide the others
     const sections = document.getElementsByTagName("section");
     for (const section of sections) {
         if (section.textContent.includes("Om oss")) {
@@ -13,7 +14,7 @@ aboutButtonaddEventListener("click", () => {
     }
 });
 
-contactButtonaddEventListener("click", () => {
+contactButton.addEventListener("click", () => {
     // Show the "Kontakt oss" section and hide the others
     const sections = document.getElementsByTagName("section");
     for (const section of sections) {
