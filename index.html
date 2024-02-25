@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <link rel="icon" type="image/png" href="https://wangsmo.com/bilde2/610255.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Github_opplegg</title>
+    <title>Bare for testing</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="app.js"></script>
+    <style>
+        .nokken-image {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .nokken-image.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
 
@@ -24,17 +37,38 @@
                 <p>Der du kan lære om alt av den legendariske Norske historien fra de mest kjente filmene</p>
             </div>
                 
-                <div style="display: flex; justify-content: center;">
+            <div style="display: flex; justify-content: center;">
                 <button onclick="window.location.href='reisen.html'" class="centered">Start reisen</button>
             </div>
-
+            
+            <br>
+            
             <div class="colum-right"></div>
             <img src="https://media1.tenor.com/m/Sq9D9_z__gEAAAAd/running-away-nora-tidemann.gif" alt="trolljegeren" class="hero-image">
-        </div>
+            </div>
     </section>
 
     <footer>
         <p class="centered">&copy; 2024 Norske Film Eventyr. Alle rettigheter reservert.</p>
     </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var nokkenImage = document.querySelector('.nokken-image');
+            var nokkenPosition = nokkenImage.getBoundingClientRect().top;
+            var windowHeight = window.innerHeight;
+
+            if (nokkenPosition < windowHeight / 2) {
+                nokkenImage.classList.add('show');
+            } else {
+                nokkenImage.classList.remove('show');
+            }
+        });
+    </script>
+
+    <div class="nokken"></div>
+    <img src="nokken.jpg" alt="nokken" class="nokken-image">
+</div>
+
 </body>
 </html>

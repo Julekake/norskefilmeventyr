@@ -1,9 +1,8 @@
 const aboutButton = document.getElementById("about-button");
 const contactButton = document.getElementById("contact-button");
 
-contactButton.addEventListener("click"), () => {
-    
-}    // Show the "Om oss" section and hide the others
+aboutButton.addEventListener("click", () => {
+    // Show the "Om oss" section and hide the others
     const sections = document.getElementsByTagName("section");
     for (const section of sections) {
         if (section.textContent.includes("Om oss")) {
@@ -23,5 +22,16 @@ contactButton.addEventListener("click", () => {
         } else {
             section.classList.add("hidden");
         }
+    }
+});
+
+window.addEventListener('scroll', function() {
+    var image = document.querySelector('nokken-image');
+    var imagePosition = image.getBoundingClientRect();
+
+    if(imagePosition.top < window.innerHeight && imagePosition.bottom >= 0) {
+        image.classList.add('show-on-scroll');
+    } else {
+        image.classList.remove('show-on-scroll');
     }
 });
