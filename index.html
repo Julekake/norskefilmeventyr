@@ -23,15 +23,15 @@
 </head>
 <body>
 
-    <audio id="backgroundAudio" autoplay loop style="display: none;">
+    <audio id="backgroundAudio" autoplay loop style="display: block;">
         <source src="Tjern.mp4" type="audio/mp4">
         Your browser does not support the audio element.
       </audio>
       
       <script>
-        // Check if the current page is the homepage
-        if (https://julekake.github.io/norskefilmeventyr/index.html === '/' || https://julekake.github.io/norskefilmeventyr/ === '/norskefilmeventyr/') {
-          document.getElementById('backgroundAudio').style.display = 'block';
+        // Check if the current URL is not the homepage
+        if (window.location.pathname !== '/' && window.location.pathname !== '/norskefilmeventyr/') {
+          document.getElementById('backgroundAudio').style.display = 'none';
         }
       </script>
 
