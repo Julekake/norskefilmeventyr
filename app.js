@@ -1,6 +1,20 @@
 const aboutButton = document.getElementById("about-button");
 const contactButton = document.getElementById("contact-button");
 
+var myAudio = document.getElementById("myAudio");
+
+function togglePlayPause() {
+  if (myAudio.paused) {
+    myAudio.play();
+  } else {
+    myAudio.pause();
+  }
+}
+
+function changeVolume() {
+  myAudio.volume = document.getElementById("volumeControl").value;
+}
+
 aboutButton.addEventListener("click", () => {
     // Show the "Om oss" section and hide the others
     const sections = document.getElementsByTagName("section");
